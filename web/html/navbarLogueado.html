@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--Codigo para la barra de navegacón  -->
+<html>
+    <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <meta charset="utf-8">
+       
+       <script>
+                $(document).ready(function(){
+                    //Esta funcion permite que el modal de crear conexióin aparesca cuando se da click a la opcion crear del menu
+                    $("#crearConexion").click(function(){
+                        $("#myModal").modal();
+                    });  
+                
+                });
+                
+               function CambiaValor(){
+                   //Esta funcion permite que los campos ubicación e ip se llenen con los datos de la celda seleccionada
+                    var select = document.getElementById("namecelda");
+                    document.getElementById("ubicacion").value= select.value;
+                    //obtenemos el valor actual del select
+                    var valopt = select.value;
+                    //condicionamos que si el valor del select es Celda1 los valuo de ip y ubicacion sean 123456 y UAM-I repectivamente
+                    if( valopt== "Celda1"){
+                       document.getElementById("ip").value= '123456'; 
+                       document.getElementById("ubicacion").value= "UAM-I"; 
+                    }//fin if
+                    // si el valor del select es Celda2 los value de ip y ubicacion sean 09876 y Aguascalientes repectivamente
+                    else{
+                       document.getElementById("ip").value= '09876'; 
+                       document.getElementById("ubicacion").value= "Aguascalientes"; 
+                    }//fin else
+               }//fin función CambiaValor
+            </script>
+       
+    </head>
+    <body>
+         <!-- Comienza la barra de nvegcion-->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+              <!--Menu responsivo -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarbab">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                    <!--Logo y nombre de home -->
+                    <a class="navbar-brand" href="/UpBabelWeb/index.jsp">
+                       <img id="logo" alt="Babel" style="width: 64px;" src="./img/LogoBabel.png">UPBabel
+                    </a>
+                </div>
+                <div id="navbarbab" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                       <!--Hecemos a la opción conexión un submenu con las opciones de crear y modificar una conexión -->
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Conexion <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                              <!--li class="dropdown-header">Conexion</li>
+                              <li class="divider"></li-->
+                              <li><a href="#" id="crearConexion" >CREAR</a></li>
+                              <li><a href="#">CONFIGURAR</a></li>
+                          </ul>
+                      </li>
+                      <!--Crear mas elementos li para añadir mas elementos(enlaces) al menu -->
+                      <!--li><a href="#">Page 2</a></li-->
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <!--Nombre del usuario -->
+                        <li><a href="#" id="Usuario1"> Usuario1</a></li>
+                        
+                    </ul>
+              </div>
+          </div>
+        </nav>
+        <!-- Termina la barra de nvegcion-->
+
+        <!-- Comienza cuadro de crear conexion-->
+        <div id="containerlog">
+            <h1>Crear conexion</h1>
+            <span class="close-btn">
+              <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
+            </span>
+        </div>
+
+<!-- Forgotten Password Container -->
+        <div id="container">
+            <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                  <!-- contenido del modal-->
+                  <div class="modal-content">
+                    <div class="modal-header" >
+                        <!--Encabezdo del modal -->
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4><span class="glyphicon glyphicon-log-in"></span> Crear conexion</h4>
+                    </div>
+                      <!--Tamaño del modal -->
+                    <div class="modal-body" style="padding:40px 50px;">
+                      <form role="form">
+                          
+                        <div class="form-group">
+                            <!--Creamos los campos para el form de crear conexion -->
+                          <label for="usrname"><span></span> Nombre de la conexion</label>
+                          <input type="text" class="form-control" id="nameconex" placeholder="Escriba un nombre para la conexion">
+                        </div>
+                        <div class="form-group">
+                          <label for="psw"><span></span> Nombre de la celda</label>
+                          <!-- Select para las celdas existentes en la BD-->
+                          <select id="namecelda" onChange="CambiaValor()">
+                            <option value="Celda1">Celda1</option>
+                            <option value="Celda2">Celda2</option>
+                          </select>
+                        </div>
+                          <div class="form-group">
+                              <label for="psw"><span></span>IP-celda</label>
+                              <!--Este campo se llena automaticamente cuando se selecciona la celda-->
+                              <input type="text" class="form-control" id="ip" value="123456" readonly>
+                          </div>
+                          <div class="form-group">
+                              <label for="psw"><span </span>Puerto</label>
+                          <select id="puerto">
+                            <option value="Puerto1">Puerto1</option>
+                            <option value="Puerto2">Puerto2</option>
+                            <option value="Puerto3">Puerto3</option>
+                          </select>
+                          </div>
+                          <div class="form-group">
+                             <label for="psw"><span class="glyphicon glyphicon-globe"></span>Ubicacion</label> 
+                             <!--Se llena automaticamente cuando se selecciona la celda -->
+                             <input type="text" class="form-control" id="ubicacion" value="UAM-I" readonly>                             
+                          </div>
+                         
+                         <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Crear conexion</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                    </div>
+                  </div>
+                </div>
+ 
+          </div>
+     
+        </div>
+        <!-- Termina el login-->
+    </body>
+</html>

@@ -1,0 +1,353 @@
+
+html{
+    min-height: 100%;/*El contenido utiliza el 100% de la pantalla esto tambien ayuda a que el footer quede al final d la pantalla*/
+    position: relative;
+}
+
+.container h1 {
+    /*Estilos para los titulos H1 de los container*/
+    font-family: 'Kanit', sans-serif;
+    position: relative;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 40px;
+    color: black;
+}
+.container h2{
+    font-family: 'Kanit', sans-serif;
+    font-size: 28px;
+    position: relative;
+    margin-top: 0px;
+    text-align: center;
+    color: black;
+}
+.container p{
+    font-family: 'Asap', sans-serif;
+    font-size: 22px;
+}
+
+.jumbotron {
+    /*Estilos para el jumbotron del encabezado*/
+    color: white;
+    font-family: "Lucida Console", Times, serif;
+    background: linear-gradient(to bottom , #114B78, #0B8BCA);/*añadimos el degradado y colores de babel */
+    border-radius: 15px 50px; 
+    padding-bottom: 0.2%;
+    padding-top: 4%;
+    text-align: center;
+    width: 96.5vw;
+    height: 35vh;
+    margin-bottom: 0px;
+}
+
+#conexion{
+    /*Estilos para el contenido de la pagina de conexion*/
+    border-right-color: black;
+    background-color: #ded9d8;
+    height: 79vh;
+}
+
+#htitulo{
+    /*Estilos para el titulo del jumbotron del encbezado*/
+    color: whitesmoke;
+    text-align: center;
+    font-size: 12vh;
+    margin-top: 1px;
+    margin-bottom: 0px;
+    padding-top: 0%;
+    padding-bottom: 1%;
+    text-shadow: 3px 3px 10px #000;
+}
+
+#phead{
+    font-size: 4vh; 
+    text-align: center;
+    font-family: "Verdana", Times, serif;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    padding-top: 0%;
+    padding-bottom: 1%;
+    text-shadow: 3px 3px 10px #000; 
+}
+#imgHed{
+    /*Estilos para la imagen de un header Desabilitada*/
+    width: 20%; height: 50%;
+    padding-bottom: 0%;
+    padding-left: 5%;
+    border-left: 2px;
+    /* opacity: 0.3;
+    box-shadow: 10px 10px 5px grey;
+    */
+}
+.navbar-brand {
+    /*Hacemos responsiva la barra de navegación*/
+  display: flex;
+  align-items: center;
+}
+.navbar-brand img {
+    /*Estilos para el logo del navbar*/
+    padding: 1% 6%;
+    width: 40%; 
+    height: 98%;
+}
+.footer-bottom{
+    /*Estilos para el ultimo footer (negro)*/
+    color: white;
+    text-shadow: 2px 1px 13px #000;
+    background: black;
+    position: absolute;
+    width: 96vw;
+    bottom: 0;
+    margin-left: 0.97%;
+}
+.footer-section{
+    /*Estilos para el footer(azul)*/
+    background: linear-gradient(to bottom , #114B78, #0B8BCA); 
+    width: 96vw;
+    height: 13vh;
+    position: absolute;
+    bottom: 30px;/*Distancia entre el foter section y el bottom*/
+    margin-left: 0.99%;
+    }
+ .flex-rw{
+     /*Haemos que el footer quede siempre al final*/
+     display: flex;
+     flex-flow: row wrap;
+  }
+#footerTot{
+    /*Indica la distancia entre el contenido y el footer*/
+    margin-top: 140px;
+}
+
+.foot-logo>img {
+    /*Estilos para el logo que aparece en el footer*/
+    width: 20%; height: 50%;
+    margin-top: 10px; 
+    padding-bottom: 2%;
+    padding-left: 5%;
+    border-left: 2px;
+}
+.footer {
+    display: table-row;
+    position: absolute;
+    bottom: 2px;  
+}
+
+.fa {
+    /*Estilos para el logo de facebook */
+    padding: 10px;
+    font-size: 30px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 2px;
+    border-radius: 50% 50%;
+}
+.fa:hover {
+    /*Estilos cunado se pasa por el con el cursor*/
+    opacity: 0.7;
+    color: greenyellow; 
+}
+.fa-facebook {
+  background: black;
+  color: white;
+}
+
+#myCarousel{
+    /*Estilos para el carrusel de imagenes*/
+    margin-bottom: 3px;
+    padding-top: 0px;
+}
+.carousel-inner{
+    background:  #459459;
+    padding-top: 1px;
+    /*background: linear-gradient(to bottom , #114B78, #005016);*/
+}
+.carousel-inner>div{
+    width: 70%;
+    margin: 3.6% 45%;
+}
+.carousel-inner>div>img{
+    width: 9.5vw;
+    height: 4vw;
+    padding: 2px;
+    margin-bottom: 2px;
+}
+.col-md-4 p{
+    padding: 0;
+    margin: 0;
+}
+.col-md-4 h6{
+   margin: 0; 
+}
+
+/*Estilos para los cuadros de modal*/
+ .modal-header, h4, .close {
+      background-color: #417B52;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+ .modal-footer {
+      background-color: #417B52;
+  }
+ .checkbox{
+      width: 70px;
+      height: auto;
+  }
+ .modal-header{
+      padding:35px 50px;
+  }
+  
+ .modal-body{
+      padding:40px 50px;
+  }
+  
+/* Login container */
+#containerlog{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 260px;
+  height: 260px;
+  border-radius: 5px;
+  background: rgba(3,3,3,0.25);
+  box-shadow: 1px 1px 50px #000;
+  display: none;
+}
+.close-btn{
+  position: absolute;
+  cursor: pointer;
+  font-family: 'Open Sans Condensed', sans-serif;
+  line-height: 18px;
+  top: 3px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  opacity: .2;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.close-btn:hover{
+  opacity: .5;
+}
+
+/* Inputs */
+input{
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-decoration: none;
+  position: relative;
+  width: 80%;
+  display: block;
+  margin: 9px auto;
+  font-size: 17px;
+  color: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: rgba(3,3,3,.1);
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+input:focus{
+  outline: none;
+  box-shadow: 3px 3px 10px #333;
+  background: rgba(3,3,3,.18);
+}
+::-webkit-input-placeholder {
+   color: #ddd;  }
+:-moz-placeholder { /* Firefox 18- */
+   color: red;  }
+::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  }
+:-ms-input-placeholder {  
+   color: #333;  }
+
+/* Link */
+a:hover{
+  opacity: 0.7;
+}
+#remember-container{
+  position: relative;
+  margin: -5px 20px;
+}
+.checkbox {
+    position: relative;
+    cursor: pointer;
+          -webkit-appearance: none;
+          padding: 5px;
+          border-radius: 4px;
+    background: rgba(3,3,3,.2);
+          display: inline-block;
+    width: 16px;
+    height: 15px;
+    }
+/*Estilos cuando se selecciona un input*/
+.checkbox:checked:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+.checkbox:checked {
+    background: rgba(3,3,3,.4);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.5);
+    color: #fff;
+}
+.checkbox:checked:after {
+    content: '\2714';
+    font-size: 10px;
+    position: absolute;
+    top: 0px;
+    left: 4px;
+    color: #fff;
+}
+#remember{
+    /*Estilos para la opcion remember(desabilitado)*/
+    position: absolute;
+    font-size: 13px;
+    font-family: 'Hind', sans-serif;
+    color: rgba(255,255,255,.5);
+    top: 7px;
+    left: 20px;
+}
+#forgotten{
+    position: absolute;
+    font-size: 12px;
+    font-family: 'Hind', sans-serif;
+    color: rgba(255,255,255,.2);
+    right: 0px;
+    top: 8px;
+    cursor: pointer;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+#forgotten:hover{
+    color: rgba(255,255,255,.6);
+}
+#forgotten-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 260px;
+    height: 180px;
+    border-radius: 10px;
+    background: rgba(3,3,3,0.25);
+    box-shadow: 1px 1px 50px #000;
+    display: none;
+}
+.orange-btn{
+    background: rgba(87,198,255,.5);
+}
